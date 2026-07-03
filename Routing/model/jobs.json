@@ -1,0 +1,43 @@
+[
+    {
+        "id":1,
+    "Job-title":"frontend developer ",
+    "Job-location":"cairo",
+    "Job-desc":"a dedicated frontend that provide real dedication to solve proplems and scalable solutions",
+    "job-skills":["html","css", "js","React"],
+    "experience":"1 year"
+},
+{
+     "id":2,
+    "Job-title":"php developer ",
+    "Job-location":"cairo",
+    "Job-desc":"a dedicated php that provide real dedication to solve proplems and scalable solutions",
+    "job-skills":["php","mysql", "js","React"],
+    "experience":"1 year"
+}
+,
+{
+    "id":3,
+    "Job-title":"React developer ",
+    "Job-location":"cairo",
+    "Job-desc":"a dedicated frontend that provide real dedication to solve proplems and scalable solutions",
+    "job-skills":["html","css", "js","React"],
+    "experience":"1 year"
+}
+,{
+    "id":4,
+    "Job-title":"Backend developer ",
+    "Job-location":"cairo",
+    "Job-desc":"a dedicated Backend that provide real dedication to solve proplems and scalable solutions",
+    "job-skills":["Node.js","Express", "MongoDb","Nest.js"],
+    "experience":"1 year"
+}
+,{
+    "id":5,
+    "Job-title":"Ai developer ",
+    "Job-location":"cairo",
+    "Job-desc":"a dedicated Ai that provide real dedication to solve proplems and scalable solutions",
+    "job-skills":["python","java", "js","React"],
+    "experience":"1 year"
+}
+]
