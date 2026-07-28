@@ -1,0 +1,14 @@
+const authorRoute = require('../controllers/authorControllers');
+const bookRoute = require('../controllers/booksControllers');
+const router = require('express').Router();
+router.get('/', authorRoute.getAllAuthors);
+router.post('/addAuthor', authorRoute.createAuthor);
+router.get('/:authorId', authorRoute.getAuthorById);
+router.put('/authorId', authorRoute.editAuthor);
+router.delete('/:authorId', authorRoute.deleteAuthor);
+router.post('/:authorId/books',bookRoute.createBookForAuthor);
+router.get('/:authorId/books',bookRoute. getAllbooksForAuthor);
+router.get('/:authorId/books/:bookId',bookRoute.getBookByAuthorandId );
+router.put('/:authorId/books/:bookId',bookRoute.editBookForAuthor);
+router.delete('/:authorId/books/:bookId',bookRoute.deleteByBookIdAndAuthor );
+module.exports = router;
