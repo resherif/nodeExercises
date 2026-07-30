@@ -1,0 +1,10 @@
+const router = require('express').Router();
+const OrdersController = require('../controllers/ordersController');
+const verifyJwt = require('../middlewares/verifyJwt');
+const authRole = require('../middlewares/authRole');
+router.get('/',verifyJwt,authRole(['admin','viewer']),OrdersController.getAllOrders);
+router.post('/',verifyJwt,authRole(['viewer']), OrdersController.createNewOrder);
+router.get('/:id',verifyJwt,authRole(['admin','viewer']), OrdersController.getOrdersById);
+router.put('/:id',verifyJwt,authRole(['admin','viewer']), OrdersController.editOrder);
+router.delete('/:id',verifyJwt, authRole(['admin','viewer']),OrdersController.deleteOrder);
+module.exports = router;

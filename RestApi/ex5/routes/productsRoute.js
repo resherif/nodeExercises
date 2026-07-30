@@ -1,0 +1,10 @@
+const router = require('express').Router();
+const ProductsController = require('../controllers/productsController');
+const verifyJwt = require('../middlewares/verifyJwt');
+const authRole = require('../middlewares/authRole');
+router.get('/',verifyJwt,authRole(['admin','viewer','editor']),ProductsController.getAllProducts);
+router.post('/', verifyJwt,authRole(['admin','editor']),ProductsController.createNewProduct);
+router.get('/:id',verifyJwt,authRole(['admin','viewer','editor']), ProductsController.getProductById);
+router.put('/:id',verifyJwt,authRole(['admin','editor']), ProductsController.editProduct);
+router.delete('/:id',verifyJwt,authRole(['admin']), ProductsController.deleteProduct);
+module.exports = router;

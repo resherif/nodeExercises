@@ -1,0 +1,10 @@
+const router = require('express').Router();
+const CategoryController = require('../controllers/categoriesController');
+const verifyJwt = require('../middlewares/verifyJwt');
+const authRole = require('../middlewares/authRole');
+router.get('/',verifyJwt,authRole(['admin','viewer','editor']),CategoryController.getAllCategories);
+router.post('/',verifyJwt,authRole(['admin']), CategoryController.createNewCategory);
+router.get('/:id',verifyJwt,authRole(['admin','viewer','editor']), CategoryController.getCategoryById);
+router.put('/:id',verifyJwt, authRole(['admin','editor']),CategoryController.editCategory);
+router.delete('/:id',verifyJwt, authRole(['admin']),CategoryController.deleteCategory);
+module.exports = router;
