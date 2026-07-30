@@ -29,8 +29,8 @@ const createNewBook = async (req, res) => {
             data: newBook
         })
     } catch (error) { 
-        return res.status(500).json({
-            message: "internal server error !",
+           return res.status(500).json({
+               message: "internal server error !",
             error:error.message
         })
     }
